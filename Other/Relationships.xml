@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="business_unit_pp_animaldata" />
+  <EntityRelationship Name="business_unit_pp_fosterfamilyinformation1" />
+  <EntityRelationship Name="business_unit_pp_shelterlocations1" />
+  <EntityRelationship Name="lk_pp_animaldata_createdby" />
+  <EntityRelationship Name="lk_pp_animaldata_modifiedby" />
+  <EntityRelationship Name="lk_pp_fosterfamilyinformation1_createdby" />
+  <EntityRelationship Name="lk_pp_fosterfamilyinformation1_modifiedby" />
+  <EntityRelationship Name="lk_pp_shelterlocations1_createdby" />
+  <EntityRelationship Name="lk_pp_shelterlocations1_modifiedby" />
+  <EntityRelationship Name="owner_pp_animaldata" />
+  <EntityRelationship Name="owner_pp_fosterfamilyinformation1" />
+  <EntityRelationship Name="owner_pp_shelterlocations1" />
+  <EntityRelationship Name="pp_animaldata_FosterClaimer_pp_fosterfamilyinformation1" />
+  <EntityRelationship Name="pp_animaldata_InitialShelter_pp_shelterlocations1" />
+  <EntityRelationship Name="pp_AnimalData_pp_FosterFamilyInformation1_pp_FosterFamilyInformation1" />
+  <EntityRelationship Name="pp_AnimalData_pp_ShelterLocations1_pp_ShelterLocations1" />
+  <EntityRelationship Name="pp_fosterfamilyinformation1_LocalShelter_pp_shelterlocations1" />
+  <EntityRelationship Name="pp_FosterFamilyInformation1_pp_ShelterLocations1_pp_ShelterLocations1" />
+  <EntityRelationship Name="team_pp_animaldata" />
+  <EntityRelationship Name="team_pp_fosterfamilyinformation1" />
+  <EntityRelationship Name="team_pp_shelterlocations1" />
+  <EntityRelationship Name="user_pp_animaldata" />
+  <EntityRelationship Name="user_pp_fosterfamilyinformation1" />
+  <EntityRelationship Name="user_pp_shelterlocations1" />
+</EntityRelationships>

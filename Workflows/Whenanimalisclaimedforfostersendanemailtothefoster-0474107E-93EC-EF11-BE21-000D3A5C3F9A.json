@@ -1,0 +1,200 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "pu_sharedcommondataserviceforapps_debef"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_outlook": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "pu_sharedoutlook_225ff"
+        },
+        "api": {
+          "name": "shared_outlook"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "811b091c-4e30-4261-8d7c-c28a2aa29415"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "pp_animaldata",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Get_a_row_by_ID": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "bf39fdb0-fdcd-4168-b396-2c3926cc4ff5"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "pp_animaldatas",
+              "recordId": "@triggerOutputs()?['body/pp_animaldataid']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Condition": {
+          "actions": {
+            "Pickup_date_5_days_ahead": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "b0bb6317-488c-45d0-a4f4-ac4a4b203661"
+              },
+              "type": "Compose",
+              "inputs": "@formatDateTime(addDays(utcNow(),5), 'dddd, MMMM d, yyyy')"
+            },
+            "Condition_2": {
+              "actions": {
+                "HTML_Photo": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "b80e03ce-c21e-46d8-84f0-7d8eb41e1229"
+                  },
+                  "type": "Compose",
+                  "inputs": "<img src=\"data:image/jpeg;base64,@{outputs('Get_a_row_by_ID')?['body/pp_photo']}\"/>"
+                },
+                "Send_an_email_(V2)": {
+                  "runAfter": {
+                    "HTML_Photo": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "acaa9fab-7c62-48bb-8508-d0f5d1c5af05"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_outlook",
+                      "operationId": "SendEmailV2",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_outlook"
+                    },
+                    "parameters": {
+                      "emailMessage/To": "maximus.golden@outlook.com",
+                      "emailMessage/Subject": "Foster Claim Confirmation",
+                      "emailMessage/Body": "<p>Dear @{outputs('Get_a_row_by_ID')?['body/pp_fostername']},<br>\n<br>\nThank you for opening your heart and home to a new pet friend. We are thrilled to inform you that you have successfully claimed to foster an animal from Paw &amp; Heart Animal Rescue.<br>\n<br>\n<strong>Animal details:</strong><br>\n<br>\n@{outputs('Get_a_row_by_ID')?['body/pp_name']}<br>\n@{outputs('HTML_Photo')}<br>\n<br>\n<strong>Pickup Information:</strong><br>\n<br>\nPickup Date: @{outputs('Pickup_date_5_days_ahead')}<br>\nPickup Shelter: @{outputs('Get_a_row_by_ID')?['body/pp_sheltername']}<br>\nShelter Address: @{outputs('Get_a_row_by_ID')?['body/pp_shelterlocation']}<br>\n<br>\n<span style=\"font-size: 11px\"><em>Bussiness hours are M-F:7am-5pm | Sat-Sun: 10am-4pm<br>\n<br>\n</em></span><span style=\"font-size: 12px\">Warm Regards,<br>\n</span><span style=\"font-size: 12px\"><strong>Paw &amp; Heart Animal Rescue Team</strong></span><br>\n</p>",
+                      "emailMessage/Importance": "Normal"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                }
+              },
+              "runAfter": {
+                "Pickup_date_5_days_ahead": [
+                  "Succeeded"
+                ]
+              },
+              "else": {
+                "actions": {
+                  "Send_an_email_(V2)_2": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "acaa9fab-7c62-48bb-8508-d0f5d1c5af05"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_outlook",
+                        "operationId": "SendEmailV2",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_outlook"
+                      },
+                      "parameters": {
+                        "emailMessage/To": "maximus.golden@outlook.com",
+                        "emailMessage/Subject": "Foster Claim Confirmation",
+                        "emailMessage/Body": "<p>Dear @{outputs('Get_a_row_by_ID')?['body/pp_fostername']},<br>\n<br>\nThank you for opening your heart and home to a new pet friend. We are thrilled to inform you that you have successfully claimed to foster an animal from Paw &amp; Heart Animal Rescue.<br>\n<br>\n<strong>Animal details:</strong><br>\n<br>\nName:@{outputs('Get_a_row_by_ID')?['body/pp_name']}<br>\n<br>\n<strong>Pickup Information:</strong><br>\n<br>\nPickup Date:@{outputs('Pickup_date_5_days_ahead')}<br>\nPickup Shelter:@{outputs('Get_a_row_by_ID')?['body/pp_sheltername']}<br>\nShelter Address:@{outputs('Get_a_row_by_ID')?['body/pp_shelterlocation']}<br>\n<br>\n<span style=\"font-size: 11px\"><em>Bussiness hours are M-F:7am-5pm | Sat-Sun: 10am-4pm<br>\n<br>\n</em></span><span style=\"font-size: 12px\">Warm Regards,<br>\n</span><span style=\"font-size: 12px\"><strong>Paw &amp; Heart Animal Rescue Team</strong></span><br>\n</p>",
+                        "emailMessage/Importance": "Normal"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  }
+                }
+              },
+              "expression": {
+                "not": {
+                  "equals": [
+                    "@outputs('Get_a_row_by_ID')?['body/pp_photo']",
+                    "@null"
+                  ]
+                }
+              },
+              "metadata": {
+                "operationMetadataId": "e5523daf-499a-4ad2-8e63-dbf763011710"
+              },
+              "type": "If"
+            }
+          },
+          "runAfter": {
+            "Get_a_row_by_ID": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Compose": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "27ad7fa7-a126-4199-8362-b0b763e5ed6a"
+                },
+                "type": "Compose",
+                "inputs": "Flow error!"
+              }
+            }
+          },
+          "expression": {
+            "equals": [
+              "@outputs('Get_a_row_by_ID')?['body/pp_shelterstatus']",
+              7
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6e400642-9f81-45ea-970c-0126bcc756f8"
+          },
+          "type": "If"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

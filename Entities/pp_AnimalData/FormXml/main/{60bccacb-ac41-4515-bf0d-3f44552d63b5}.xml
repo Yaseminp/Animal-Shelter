@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{60bccacb-ac41-4515-bf0d-3f44552d63b5}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{f792f2de-ad4f-4862-99a6-cfbd23bd3a28}" IsUserDefined="1" name="General">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{06825394-5cd2-46be-86c2-316f124aba90}" columns="11" name="General">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{0d96075f-8eab-4274-b351-9886f8288582}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{ca536dae-7be3-4070-aa01-2c34f00c5273}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Initial Shelter" languagecode="1033" />
+                        </labels>
+                        <control id="pp_initialshelter" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="pp_initialshelter" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{260ce4df-3962-42ac-b04b-5d242caf275a}" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                      <cell id="{f29a6ebb-382f-40d3-9f86-0a998497ffe7}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Shelter Name" languagecode="1033" />
+                        </labels>
+                        <control id="pp_sheltername" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="pp_sheltername" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d7f58f74-79be-4265-9099-6394c974b764}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="pp_name" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="pp_name" />
+                      </cell>
+                      <cell id="{33c84657-31de-4f68-a868-a67c1abf058a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Shelter Status" languagecode="1033" />
+                        </labels>
+                        <control id="header_pp_shelterstatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="pp_shelterstatus" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{eced98fb-4754-461d-9f06-ebba6f68deb5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Photo" languagecode="1033" />
+                        </labels>
+                        <control id="pp_photo" classid="{7E548B0D-209C-477B-9DCD-F0F44472381D}" datafieldname="pp_photo" disabled="false" />
+                      </cell>
+                      <cell id="{a86d44c4-489c-4186-8f8c-fce2ba6cc7a8}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Medical Conditions" languagecode="1033" />
+                        </labels>
+                        <control id="pp_medicalconditions" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="pp_medicalconditions" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2494d2e4-b046-48e5-86f6-96f0aa2ca6e3}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Type" languagecode="1033" />
+                        </labels>
+                        <control id="pp_type" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="pp_type" disabled="false" />
+                      </cell>
+                      <cell id="{d6dcbd20-67a1-465d-9fee-b06c2476ceca}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Medical Treatments" languagecode="1033" />
+                        </labels>
+                        <control id="pp_medicaltreatments" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="pp_medicaltreatments" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{90f4f8a4-e588-4421-811b-b0cbce291ecc}">
+                        <labels>
+                          <label description="Date of Birth" languagecode="1033" />
+                        </labels>
+                        <control id="pp_dateofbirth" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="pp_dateofbirth" />
+                      </cell>
+                      <cell id="{71425d5c-aae0-4f99-a169-dd93b21bb751}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Next Vet Date" languagecode="1033" />
+                        </labels>
+                        <control id="pp_nextvetdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="pp_nextvetdate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{21cb60b3-2f45-4d2c-96a2-1ea0180e7321}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Age" languagecode="1033" />
+                        </labels>
+                        <control id="pp_age" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="pp_age" disabled="false" />
+                      </cell>
+                      <cell id="{786ae737-cc0a-4c2a-ac6a-64c296111fd4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Next Vet" languagecode="1033" />
+                        </labels>
+                        <control id="pp_nextvet" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="pp_nextvet" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1f2f59ca-32d9-4a15-aa3f-5c3815e838e4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Sex" languagecode="1033" />
+                        </labels>
+                        <control id="pp_sex" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="pp_sex" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{5a54ab5d-3328-427e-ac38-353537fc5855}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{29974172-99eb-4df6-9dca-e131b602db84}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Medical Passed" languagecode="1033" />
+                        </labels>
+                        <control id="pp_medicalpassed" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="pp_medicalpassed" uniqueid="{a2d71e08-e7ff-4e1a-9a90-edcd2935f7a1}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_2" id="ac7bd5fc-35fe-469d-8db3-a08bc236a646" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Shelter | Foster" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="Shelter Details" id="983a37d7-8a23-4c45-94ba-1e0b133f89dd" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="Shelter Details" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{473d2f03-e056-4f35-9145-60a2bd71c904}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{d44c3a89-eb61-4359-b98d-77fa24f9597b}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b67294da-155f-4ed2-babe-e2bd23afaa90}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Initial Shelter" languagecode="1033" />
+                        </labels>
+                        <control id="pp_initialshelter" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="pp_initialshelter" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{f6a7b40f-5201-4667-b955-e3c85e99ce76}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="New QV control 1739148270697" languagecode="1033" />
+                        </labels>
+                        <control id="QuickviewControl1739148270697" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}" datafieldname="pp_initialshelter">
+                          <parameters>
+                            <DisplayAsCustomer360Tile>false</DisplayAsCustomer360Tile>
+                            <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="pp_shelterlocations1"&gt;7b0f11cf-ad00-411a-bdae-cd46ba09b102&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e7b13c3b-8dc2-4fa3-b5fe-9f4f0512b5f4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Date of Arrival" languagecode="1033" />
+                        </labels>
+                        <control id="pp_dateofarrival" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="pp_dateofarrival" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{5add2ba8-3afc-4123-96e7-47a5a526d244}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="Foster Details" id="b617ba3a-9cc7-41a6-aaf0-7f1291d62d98" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="Foster Details" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{9c3231d5-cd95-4f39-8dfb-a5df5ccf9be1}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{ea7355c7-38ab-4ec3-900f-fc426171f767}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{27847a84-b8a4-4f5a-bac2-ae80e16bac8f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Foster Claimer" languagecode="1033" />
+                        </labels>
+                        <control id="pp_fosterclaimer" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="pp_fosterclaimer" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{c62ecb6e-b1ba-4e58-9ba4-6828a77d3b3d}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="New QV control 1739149802588" languagecode="1033" />
+                        </labels>
+                        <control id="QuickviewControl1739149802588" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}" datafieldname="pp_fosterclaimer">
+                          <parameters>
+                            <DisplayAsCustomer360Tile>false</DisplayAsCustomer360Tile>
+                            <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="pp_fosterfamilyinformation1"&gt;b23d590e-7138-4c60-89c1-e30b42e43d1e&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{59ceca7c-459c-4288-8a97-84b2fe2e0c91}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Date of Foster" languagecode="1033" />
+                        </labels>
+                        <control id="pp_dateoffoster" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="pp_dateoffoster" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{56ce20e6-73c0-48f9-bad1-45df4c69e61e}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="Adoption" id="9bf62962-a238-410b-9e51-ce8caff7fa42" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Adoption" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="Adoption Details" id="d154bf10-4b1b-40b8-9682-c70b839b2878" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Adoption Details" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{24ac9f11-0068-426a-8138-24b9db87d47f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Adopter" languagecode="1033" />
+                        </labels>
+                        <control id="pp_adopter" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="pp_adopter" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2ece5473-a03d-4e99-b5b1-f88d0ccdb53d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Date of Adoption" languagecode="1033" />
+                        </labels>
+                        <control id="pp_dateofadoption" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="pp_dateofadoption" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1fb21bf5-805a-4080-adad-5aaf2df77838}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Forever Family Story" languagecode="1033" />
+                        </labels>
+                        <control id="pp_foreverfamilystory" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="pp_foreverfamilystory" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{dec9aab3-311b-422d-a0a9-62641153d803}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{4bdccb97-5047-4e48-993c-8c5d8ef79965}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{c52ef7e3-f9ab-4c0e-a0cc-aa62c156639b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{c390c8fe-c04c-44ef-8fe8-b167e954cf9c}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{fd7862f0-4629-4788-acc3-0e122e38a254}" colspan="1" rowspan="1">
+              <labels>
+                <label description="Microchip ID" languagecode="1033" />
+              </labels>
+              <control id="header_pp_microchipid" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="pp_microchipid" disabled="true" />
+            </cell>
+            <cell id="{3fd7c239-7790-4e6a-9f74-8c487c0ebce6}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="Current Location" languagecode="1033" />
+              </labels>
+              <control id="header_pp_currentlocation" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="pp_currentlocation" disabled="false" />
+            </cell>
+            <cell id="{79b0d432-aa1b-447d-958a-f51b40488fcf}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="Shelter Status" languagecode="1033" />
+              </labels>
+              <control id="header_pp_shelterstatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="pp_shelterstatus" disabled="false" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{c6727858-c3a3-4f3b-aa09-9e2964593911}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{59528990-6f7a-499e-869a-52339d7934ce}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{33c47f70-120e-4240-b495-b2975e90e870}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{6fd68201-14a4-45a0-89c9-443d2ab47303}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+      <controlDescriptions>
+        <controlDescription forControl="{a2d71e08-e7ff-4e1a-9a90-edcd2935f7a1}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>pp_medicalpassed</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>pp_medicalpassed</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">pp_medicalpassed</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">pp_medicalpassed</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">pp_medicalpassed</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

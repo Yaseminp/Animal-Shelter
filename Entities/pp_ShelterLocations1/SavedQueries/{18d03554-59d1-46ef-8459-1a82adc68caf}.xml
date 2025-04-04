@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{18d03554-59d1-46ef-8459-1a82adc68caf}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="pp_shelterid" select="1" icon="1" preview="1">
+        <row name="result" id="pp_shelterlocations1id">
+          <cell name="pp_shelterid" width="130" />
+          <cell name="pp_sheltername" width="150" />
+          <cell name="pp_shelterlocation" width="150" />
+          <cell name="pp_sheltermanager" width="150" />
+          <cell name="pp_sheltercapacity" width="117" />
+          <cell name="pp_sheltertypes" width="290" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="pp_shelterlocations1">
+          <attribute name="pp_shelterlocations1id" />
+          <attribute name="pp_shelterid" />
+          <order attribute="pp_shelterid" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="pp_sheltername" />
+          <attribute name="pp_shelterlocation" />
+          <attribute name="pp_sheltermanager" />
+          <attribute name="pp_sheltercapacity" />
+          <attribute name="pp_sheltertypes" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Shelter Locations" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

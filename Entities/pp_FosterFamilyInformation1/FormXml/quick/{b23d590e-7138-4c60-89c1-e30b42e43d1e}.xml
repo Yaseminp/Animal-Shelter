@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{b23d590e-7138-4c60-89c1-e30b42e43d1e}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{dcd1c1fa-369c-4048-ba3d-e6d735e2c121}" IsUserDefined="1" name="General">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{42d9356b-cae7-47af-bfe1-8aca9fa56733}" name="General">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{97ec9fc9-76a0-401c-a494-54a714092e2d}" visible="false">
+                        <labels>
+                          <label description="Foster ID" languagecode="1033" />
+                        </labels>
+                        <control id="pp_fosterid" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="pp_fosterid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{aee2cffb-896e-4ba3-bde6-292a0d7d123f}" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6e7a8bbb-e907-430a-a918-7cf69d14fcc7}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Foster Claimer Name" languagecode="1033" />
+                        </labels>
+                        <control id="pp_fosterclaimername" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="pp_fosterclaimername" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7bc3a6ce-5327-4ad1-bb05-1b5da271c58f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Foster Location" languagecode="1033" />
+                        </labels>
+                        <control id="pp_fosterlocation" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="pp_fosterlocation" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{98c9c0f3-76f0-4771-a692-8c2de10b7a99}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Join Date" languagecode="1033" />
+                        </labels>
+                        <control id="pp_joindate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="pp_joindate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{09b101ac-3371-4416-b858-6c94b80835de}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Local Shelter" languagecode="1033" />
+                        </labels>
+                        <control id="pp_localshelter" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="pp_localshelter" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{211b5cdf-28e7-ef11-be20-000d3a5c3f9a}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="pp_microchipid" select="1" icon="1" preview="1">
+        <row name="result" id="pp_animaldataid">
+          <cell name="pp_microchipid" width="139" />
+          <cell name="pp_name" width="150" />
+          <cell name="pp_type" width="100" />
+          <cell name="pp_shelterstatus" width="129" />
+          <cell name="pp_shelterlocation" width="191" />
+          <cell name="pp_medicalconditions" width="151" />
+          <cell name="pp_medicaltreatments" width="152" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical" distinct="true">
+        <entity name="pp_animaldata">
+          <attribute name="pp_animaldataid" />
+          <attribute name="pp_microchipid" />
+          <attribute name="pp_name" />
+          <attribute name="pp_shelterstatus" />
+          <attribute name="pp_type" />
+          <attribute name="pp_shelterlocation" />
+          <order attribute="pp_name" descending="false" />
+          <attribute name="pp_medicalconditions" />
+          <attribute name="pp_medicaltreatments" />
+          <filter type="and">
+            <condition attribute="pp_inshelter" operator="eq" value="1" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Available Animal Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Show all animals whose current location is In Shelter" languagecode="1033" />
+    </Descriptions>
+  </savedquery>
+</savedqueries>

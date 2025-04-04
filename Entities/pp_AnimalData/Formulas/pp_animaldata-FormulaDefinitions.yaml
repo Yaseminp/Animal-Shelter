@@ -1,0 +1,28 @@
+pp_age: =DateDiff(pp_dateofbirth,Now(), TimeUnit.Years)
+pp_currentlocation: |-
+    =If(
+    // First Condition: Check if the animal is adopted and has a foster claimer
+        !IsBlank(pp_dateofadoption) && !IsBlank(pp_FosterClaimer.pp_fosterid),
+        "",  // If both are not blank, return an empty string
+    // Second Condition: Check if the animal has a foster claimer and initial shelter
+        If( !IsBlank(pp_FosterClaimer.pp_fosterid) && !IsBlank( pp_InitialShelter.pp_shelterid),
+            pp_FosterClaimer.pp_fosterid,  // If both are not blank, return the Foster ID
+    // Third Condition: Check if the animal has an initial shelter
+         If( !IsBlank(pp_InitialShelter.pp_shelterid),
+                pp_InitialShelter.pp_shelterid,"" // If not blank, return the Shelter ID
+            )
+        )
+    )
+        
+pp_fostername: =pp_FosterClaimer.pp_fosterclaimername
+pp_inshelter: |
+    =If(
+        StartsWith(pp_currentlocation,"S-"),
+        true,
+        false
+        )
+    
+    
+    
+pp_shelterlocation: =pp_InitialShelter.pp_shelterlocation
+pp_sheltername: =pp_InitialShelter.pp_sheltername

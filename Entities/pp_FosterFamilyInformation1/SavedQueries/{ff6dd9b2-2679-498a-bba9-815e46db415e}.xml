@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{ff6dd9b2-2679-498a-bba9-815e46db415e}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="pp_fosterid" select="1" icon="1" preview="1">
+        <row name="result" id="pp_fosterfamilyinformation1id">
+          <cell name="pp_fosterid" width="101" />
+          <cell name="pp_fosterclaimername" width="150" />
+          <cell name="pp_fosterlocation" width="150" />
+          <cell name="pp_joindate" width="150" />
+          <cell name="pp_localshelter" width="116" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="pp_fosterfamilyinformation1">
+          <attribute name="pp_fosterfamilyinformation1id" />
+          <attribute name="pp_fosterid" />
+          <order attribute="pp_fosterid" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="pp_fosterclaimername" />
+          <attribute name="pp_fosterlocation" />
+          <attribute name="pp_joindate" />
+          <attribute name="pp_localshelter" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Foster Family Informations" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

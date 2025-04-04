@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>pp_pawheartanimalrescue_111bd</Name>
+  <AppVersion>2025-02-27T00:41:21Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.25022.11.0</CreatedByClientVersion>
+  <MinClientVersion>3.25022.11.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","showStatusBar":"false","publisherVersion":"3.25022.11","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20250221T055208Z-3.25021.9.0"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>rgba(241, 244, 249, 1)</BackgroundColor>
+  <DisplayName>Paw &amp; Heart Animal Rescue</DisplayName>
+  <Description>V1</Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{}</ConnectionReferences>
+  <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds","overrideValues":{"status":"NotSpecified","environmentVariableName":""}},"dataSources":{"Animal Data":{"entitySetName":"pp_animaldatas","logicalName":"pp_animaldata"},"Shelter Locations":{"entitySetName":"pp_shelterlocations1s","logicalName":"pp_shelterlocations1"},"Foster Family Informations":{"entitySetName":"pp_fosterfamilyinformation1s","logicalName":"pp_fosterfamilyinformation1"}}}}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>0</CanConsumeAppPass>
+  <CanvasAppType>0</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"logicalname":"pp_animaldata","componenttype":1},{"logicalname":"pp_shelterlocations1","componenttype":1},{"logicalname":"pp_fosterfamilyinformation1","componenttype":1}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/pp_pawheartanimalrescue_111bd_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/pp_pawheartanimalrescue_111bd_DocumentUri.msapp</DocumentUri>
+  <AdditionalUris>
+    <AdditionalUri>/CanvasApps/pp_pawheartanimalrescue_111bd_AdditionalUris0_identity.json</AdditionalUri>
+  </AdditionalUris>
+</CanvasApp>

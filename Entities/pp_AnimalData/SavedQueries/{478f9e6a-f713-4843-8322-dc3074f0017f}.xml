@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{478f9e6a-f713-4843-8322-dc3074f0017f}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="pp_microchipid" select="1" icon="1" preview="1">
+        <row name="result" id="pp_animaldataid">
+          <cell name="pp_microchipid" width="139" />
+          <cell name="pp_name" width="150" />
+          <cell name="pp_type" width="100" />
+          <cell name="pp_shelterstatus" width="129" />
+          <cell name="pp_shelterlocation" width="191" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="pp_animaldata">
+          <attribute name="pp_animaldataid" />
+          <attribute name="pp_microchipid" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="pp_name" />
+          <attribute name="pp_shelterstatus" />
+          <attribute name="pp_type" />
+          <attribute name="pp_shelterlocation" />
+          <order attribute="pp_name" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Animal Data" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

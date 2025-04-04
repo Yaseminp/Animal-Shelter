@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{7b0f11cf-ad00-411a-bdae-cd46ba09b102}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{188ae5af-ed19-404e-ace7-ef5c9f7600e8}" IsUserDefined="1" name="General">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{a9e4510a-9810-46cc-baa0-b3b82fa558fd}" name="General">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{0870ec45-02ca-4a0b-b6e7-15c16c6983e6}">
+                        <labels>
+                          <label description="Shelter ID" languagecode="1033" />
+                        </labels>
+                        <control id="pp_shelterid" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="pp_shelterid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4975d5e8-9033-4469-83c3-e40ba8a4b3f6}" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{389774c2-bd26-4a8f-9007-bb7a760356d6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Shelter Name" languagecode="1033" />
+                        </labels>
+                        <control id="pp_sheltername" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="pp_sheltername" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bd19aeca-99c4-475e-b0c4-7a4fb7b2c5ed}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Shelter Location" languagecode="1033" />
+                        </labels>
+                        <control id="pp_shelterlocation" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="pp_shelterlocation" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{49473f43-3c25-4301-90a7-2da351ce685b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Shelter Manager" languagecode="1033" />
+                        </labels>
+                        <control id="pp_sheltermanager" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="pp_sheltermanager" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ed31c2f3-aa4d-4bb1-a3de-1e16755105c5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Shelter Capacity" languagecode="1033" />
+                        </labels>
+                        <control id="pp_sheltercapacity" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="pp_sheltercapacity" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9ad2919f-9413-467a-a269-2e1ddff2a7bc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Shelter Types" languagecode="1033" />
+                        </labels>
+                        <control id="pp_sheltertypes" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="pp_sheltertypes" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>
